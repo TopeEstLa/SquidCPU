@@ -1,1 +1,1 @@
-"# SquidCPU" 
+# SquidCPU
