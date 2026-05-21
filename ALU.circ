@@ -1359,4 +1359,10 @@
     <wire from="(330,160)" to="(330,170)"/>
     <wire from="(370,100)" to="(370,190)"/>
   </circuit>
+  <circuit name="bloc_shift">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="bloc_shift"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+  </circuit>
 </project>
