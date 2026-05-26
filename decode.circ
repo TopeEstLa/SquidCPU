@@ -100,6 +100,18 @@
     <wire from="(240,330)" to="(240,390)"/>
     <wire from="(240,390)" to="(280,390)"/>
     <wire from="(240,80)" to="(240,110)"/>
+    <wire from="(500,390)" to="(580,390)"/>
+    <wire from="(500,410)" to="(620,410)"/>
+    <wire from="(500,430)" to="(630,430)"/>
+    <wire from="(500,450)" to="(540,450)"/>
+    <wire from="(540,450)" to="(540,460)"/>
+    <wire from="(540,460)" to="(660,460)"/>
+    <wire from="(580,390)" to="(580,440)"/>
+    <wire from="(580,440)" to="(660,440)"/>
+    <wire from="(620,400)" to="(620,410)"/>
+    <wire from="(620,400)" to="(660,400)"/>
+    <wire from="(630,380)" to="(630,430)"/>
+    <wire from="(630,380)" to="(660,380)"/>
     <wire from="(640,290)" to="(640,420)"/>
     <wire from="(640,290)" to="(910,290)"/>
     <wire from="(640,420)" to="(660,420)"/>
@@ -153,11 +165,20 @@
       <a name="fanout" val="6"/>
       <a name="incoming" val="24"/>
     </comp>
-    <comp lib="0" loc="(240,250)" name="Pin">
+    <comp lib="0" loc="(250,510)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="slctRegB"/>
       <a name="type" val="output"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(310,400)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="value" val="0x0"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(380,510)" name="Constant">
+      <a name="value" val="0x8"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(630,200)" name="Pin">
@@ -167,28 +188,123 @@
       <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(630,320)" name="Pin">
+    <comp lib="0" loc="(660,510)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctRegWrite"/>
       <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
+    <comp lib="2" loc="(250,490)" name="Multiplexer">
+      <a name="facing" val="south"/>
+      <a name="select" val="4"/>
+      <a name="selloc" val="tr"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="2" loc="(620,510)" name="Multiplexer">
+      <a name="select" val="4"/>
+      <a name="selloc" val="tr"/>
+      <a name="width" val="4"/>
+    </comp>
     <comp loc="(580,200)" name="type_op_to_slctOp"/>
     <wire from="(160,240)" to="(160,250)"/>
     <wire from="(160,240)" to="(230,240)"/>
+    <wire from="(170,420)" to="(170,450)"/>
+    <wire from="(170,420)" to="(180,420)"/>
+    <wire from="(180,420)" to="(180,450)"/>
+    <wire from="(180,420)" to="(190,420)"/>
+    <wire from="(190,420)" to="(190,450)"/>
+    <wire from="(190,420)" to="(200,420)"/>
+    <wire from="(200,420)" to="(200,450)"/>
+    <wire from="(200,420)" to="(210,420)"/>
     <wire from="(210,180)" to="(210,200)"/>
     <wire from="(210,200)" to="(360,200)"/>
+    <wire from="(210,420)" to="(210,450)"/>
+    <wire from="(210,420)" to="(220,420)"/>
     <wire from="(220,180)" to="(220,220)"/>
     <wire from="(220,220)" to="(360,220)"/>
+    <wire from="(220,420)" to="(220,450)"/>
+    <wire from="(220,420)" to="(230,420)"/>
     <wire from="(230,180)" to="(230,240)"/>
+    <wire from="(230,420)" to="(230,450)"/>
+    <wire from="(230,420)" to="(240,420)"/>
     <wire from="(240,120)" to="(240,160)"/>
-    <wire from="(240,180)" to="(240,250)"/>
+    <wire from="(240,180)" to="(240,420)"/>
+    <wire from="(240,420)" to="(240,450)"/>
+    <wire from="(240,420)" to="(250,420)"/>
+    <wire from="(250,420)" to="(250,450)"/>
+    <wire from="(250,420)" to="(260,420)"/>
+    <wire from="(250,490)" to="(250,510)"/>
     <wire from="(260,180)" to="(260,240)"/>
     <wire from="(260,240)" to="(320,240)"/>
+    <wire from="(260,420)" to="(260,450)"/>
+    <wire from="(260,420)" to="(270,420)"/>
+    <wire from="(270,420)" to="(270,450)"/>
+    <wire from="(270,420)" to="(280,420)"/>
+    <wire from="(280,420)" to="(280,450)"/>
+    <wire from="(290,420)" to="(290,450)"/>
+    <wire from="(290,420)" to="(300,420)"/>
+    <wire from="(300,420)" to="(300,450)"/>
+    <wire from="(300,420)" to="(310,420)"/>
+    <wire from="(310,400)" to="(310,420)"/>
+    <wire from="(310,420)" to="(310,450)"/>
+    <wire from="(310,420)" to="(320,420)"/>
     <wire from="(320,240)" to="(320,320)"/>
-    <wire from="(320,320)" to="(630,320)"/>
-    <wire from="(580,200)" to="(630,200)"/>
+    <wire from="(320,320)" to="(450,320)"/>
+    <wire from="(320,420)" to="(320,450)"/>
+    <wire from="(330,470)" to="(360,470)"/>
+    <wire from="(360,380)" to="(360,470)"/>
+    <wire from="(360,380)" to="(600,380)"/>
+    <wire from="(380,510)" to="(540,510)"/>
+    <wire from="(450,320)" to="(450,430)"/>
+    <wire from="(450,430)" to="(470,430)"/>
+    <wire from="(470,430)" to="(470,580)"/>
+    <wire from="(470,430)" to="(480,430)"/>
+    <wire from="(470,580)" to="(580,580)"/>
+    <wire from="(480,430)" to="(480,570)"/>
+    <wire from="(480,430)" to="(490,430)"/>
+    <wire from="(480,570)" to="(580,570)"/>
+    <wire from="(490,430)" to="(490,560)"/>
+    <wire from="(490,430)" to="(500,430)"/>
+    <wire from="(490,560)" to="(580,560)"/>
+    <wire from="(500,430)" to="(500,500)"/>
+    <wire from="(500,430)" to="(510,430)"/>
+    <wire from="(500,500)" to="(580,500)"/>
+    <wire from="(510,430)" to="(510,490)"/>
+    <wire from="(510,430)" to="(520,430)"/>
+    <wire from="(510,490)" to="(580,490)"/>
+    <wire from="(520,430)" to="(520,480)"/>
+    <wire from="(520,430)" to="(530,430)"/>
+    <wire from="(520,480)" to="(580,480)"/>
+    <wire from="(530,430)" to="(530,470)"/>
+    <wire from="(530,430)" to="(540,430)"/>
+    <wire from="(530,470)" to="(580,470)"/>
+    <wire from="(540,430)" to="(540,460)"/>
+    <wire from="(540,430)" to="(550,430)"/>
+    <wire from="(540,460)" to="(580,460)"/>
+    <wire from="(540,510)" to="(540,550)"/>
+    <wire from="(540,510)" to="(550,510)"/>
+    <wire from="(540,550)" to="(580,550)"/>
+    <wire from="(550,430)" to="(550,450)"/>
+    <wire from="(550,430)" to="(560,430)"/>
+    <wire from="(550,450)" to="(580,450)"/>
+    <wire from="(550,510)" to="(550,540)"/>
+    <wire from="(550,510)" to="(560,510)"/>
+    <wire from="(550,540)" to="(580,540)"/>
+    <wire from="(560,430)" to="(560,440)"/>
+    <wire from="(560,430)" to="(580,430)"/>
+    <wire from="(560,440)" to="(580,440)"/>
+    <wire from="(560,510)" to="(560,530)"/>
+    <wire from="(560,510)" to="(570,510)"/>
+    <wire from="(560,530)" to="(580,530)"/>
+    <wire from="(570,510)" to="(570,520)"/>
+    <wire from="(570,510)" to="(580,510)"/>
+    <wire from="(570,520)" to="(580,520)"/>
+    <wire from="(580,200)" to="(600,200)"/>
+    <wire from="(600,200)" to="(600,380)"/>
+    <wire from="(600,200)" to="(630,200)"/>
+    <wire from="(600,380)" to="(600,430)"/>
+    <wire from="(620,510)" to="(660,510)"/>
   </circuit>
   <circuit name="type_op_to_slctOp">
     <a name="appearance" val="logisim_evolution"/>
