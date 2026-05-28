@@ -77,6 +77,10 @@
       <a name="label" val="F_24bits"/>
       <a name="width" val="24"/>
     </comp>
+    <comp lib="0" loc="(550,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="zero"/>
+    </comp>
     <comp lib="0" loc="(950,290)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
@@ -134,6 +138,7 @@
     <comp loc="(560,270)" name="fetch"/>
     <comp loc="(780,320)" name="decode"/>
     <wire from="(300,270)" to="(340,270)"/>
+    <wire from="(550,340)" to="(560,340)"/>
     <wire from="(560,270)" to="(560,320)"/>
     <wire from="(780,320)" to="(900,320)"/>
     <wire from="(780,340)" to="(820,340)"/>
