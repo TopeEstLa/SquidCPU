@@ -84,12 +84,6 @@
       <a name="type" val="output"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(390,270)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
-      <a name="type" val="output"/>
-      <a name="width" val="8"/>
-    </comp>
     <comp lib="0" loc="(400,400)" name="Constant">
       <a name="width" val="8"/>
     </comp>
@@ -144,8 +138,6 @@
     <wire from="(110,330)" to="(110,450)"/>
     <wire from="(110,330)" to="(200,330)"/>
     <wire from="(350,140)" to="(520,140)"/>
-    <wire from="(390,270)" to="(390,290)"/>
-    <wire from="(390,290)" to="(550,290)"/>
     <wire from="(400,400)" to="(450,400)"/>
     <wire from="(420,330)" to="(490,330)"/>
     <wire from="(450,350)" to="(450,400)"/>
@@ -156,8 +148,7 @@
     <wire from="(520,140)" to="(520,160)"/>
     <wire from="(520,160)" to="(640,160)"/>
     <wire from="(530,340)" to="(550,340)"/>
-    <wire from="(550,220)" to="(550,290)"/>
-    <wire from="(550,290)" to="(550,340)"/>
+    <wire from="(550,220)" to="(550,340)"/>
     <wire from="(580,130)" to="(760,130)"/>
     <wire from="(580,60)" to="(580,130)"/>
     <wire from="(640,140)" to="(640,160)"/>

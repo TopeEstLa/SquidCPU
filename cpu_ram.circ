@@ -73,10 +73,10 @@
     <comp lib="0" loc="(210,240)" name="Clock">
       <a name="appearance" val="classic"/>
     </comp>
-    <comp lib="0" loc="(230,120)" name="Pin">
+    <comp lib="0" loc="(320,120)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
-      <a name="label" val="stor"/>
+      <a name="label" val="We"/>
     </comp>
     <comp lib="0" loc="(340,230)" name="Constant"/>
     <comp lib="0" loc="(40,120)" name="Pin">
@@ -98,8 +98,8 @@
     <wire from="(130,120)" to="(130,180)"/>
     <wire from="(130,180)" to="(360,180)"/>
     <wire from="(210,240)" to="(360,240)"/>
-    <wire from="(230,120)" to="(230,220)"/>
-    <wire from="(230,220)" to="(360,220)"/>
+    <wire from="(320,120)" to="(320,220)"/>
+    <wire from="(320,220)" to="(360,220)"/>
     <wire from="(340,230)" to="(360,230)"/>
     <wire from="(40,120)" to="(40,260)"/>
     <wire from="(40,260)" to="(360,260)"/>
