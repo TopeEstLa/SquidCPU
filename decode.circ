@@ -205,6 +205,12 @@
     <a name="circuit" val="decode_instru"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1030,220)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="jump"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(160,250)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
@@ -270,12 +276,6 @@
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(640,240)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="jump"/>
-      <a name="output" val="true"/>
-    </comp>
     <comp lib="0" loc="(640,260)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
@@ -302,6 +302,11 @@
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
+    <comp lib="0" loc="(950,200)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="zero"/>
+    </comp>
+    <comp lib="1" loc="(1010,220)" name="AND Gate"/>
     <comp lib="2" loc="(250,490)" name="Multiplexer">
       <a name="facing" val="south"/>
       <a name="select" val="4"/>
@@ -314,6 +319,7 @@
       <a name="width" val="4"/>
     </comp>
     <comp loc="(580,200)" name="type_op_decode"/>
+    <wire from="(1010,220)" to="(1030,220)"/>
     <wire from="(160,240)" to="(160,250)"/>
     <wire from="(160,240)" to="(230,240)"/>
     <wire from="(170,420)" to="(170,450)"/>
@@ -411,12 +417,13 @@
     <wire from="(570,520)" to="(580,520)"/>
     <wire from="(580,200)" to="(600,200)"/>
     <wire from="(580,220)" to="(750,220)"/>
-    <wire from="(580,240)" to="(640,240)"/>
+    <wire from="(580,240)" to="(960,240)"/>
     <wire from="(580,260)" to="(640,260)"/>
     <wire from="(600,200)" to="(600,380)"/>
     <wire from="(600,200)" to="(630,200)"/>
     <wire from="(600,380)" to="(600,430)"/>
     <wire from="(620,510)" to="(660,510)"/>
+    <wire from="(950,200)" to="(960,200)"/>
   </circuit>
   <circuit name="type_op_decode">
     <a name="appearance" val="logisim_evolution"/>
