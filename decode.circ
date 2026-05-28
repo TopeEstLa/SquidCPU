@@ -31,12 +31,12 @@
   <lib desc="#BFH-Praktika" name="10"/>
   <lib desc="#Input/Output-Extra" name="11"/>
   <lib desc="#Soc" name="12"/>
-  <lib desc="file#data_paths.circ" name="13">
+  <lib desc="file#cpu_registry.circ" name="13">
     <tool name="registry_24bits">
       <a name="facing" val="south"/>
     </tool>
   </lib>
-  <main name="main"/>
+  <main name="decode"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -69,12 +69,6 @@
     <tool lib="5" name="D Flip-Flop"/>
     <tool lib="5" name="Register"/>
   </toolbar>
-  <circuit name="main">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
-  </circuit>
   <circuit name="decode">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="decode"/>
@@ -90,33 +84,53 @@
       <a name="label" val="instru"/>
       <a name="width" val="24"/>
     </comp>
+    <comp lib="0" loc="(560,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="slctOp"/>
+      <a name="type" val="output"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(570,390)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="slctRegA"/>
+      <a name="type" val="output"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(570,420)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="slctRegB"/>
+      <a name="type" val="output"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(570,450)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="slctRegWrite"/>
+      <a name="type" val="output"/>
+      <a name="width" val="4"/>
+    </comp>
     <comp lib="13" loc="(240,330)" name="registry_24bits">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="13" loc="(880,380)" name="data_path"/>
     <comp loc="(500,390)" name="decode_instru"/>
     <wire from="(170,100)" to="(220,100)"/>
     <wire from="(220,100)" to="(220,110)"/>
     <wire from="(240,330)" to="(240,390)"/>
     <wire from="(240,390)" to="(280,390)"/>
     <wire from="(240,80)" to="(240,110)"/>
-    <wire from="(500,390)" to="(580,390)"/>
-    <wire from="(500,410)" to="(620,410)"/>
-    <wire from="(500,430)" to="(630,430)"/>
-    <wire from="(500,450)" to="(540,450)"/>
-    <wire from="(540,450)" to="(540,460)"/>
-    <wire from="(540,460)" to="(660,460)"/>
-    <wire from="(580,390)" to="(580,440)"/>
-    <wire from="(580,440)" to="(660,440)"/>
-    <wire from="(620,400)" to="(620,410)"/>
-    <wire from="(620,400)" to="(660,400)"/>
-    <wire from="(630,380)" to="(630,430)"/>
-    <wire from="(630,380)" to="(660,380)"/>
-    <wire from="(640,290)" to="(640,420)"/>
-    <wire from="(640,290)" to="(910,290)"/>
-    <wire from="(640,420)" to="(660,420)"/>
-    <wire from="(880,400)" to="(910,400)"/>
-    <wire from="(910,290)" to="(910,400)"/>
+    <wire from="(500,390)" to="(550,390)"/>
+    <wire from="(500,410)" to="(560,410)"/>
+    <wire from="(500,430)" to="(560,430)"/>
+    <wire from="(500,450)" to="(570,450)"/>
+    <wire from="(550,360)" to="(550,390)"/>
+    <wire from="(550,360)" to="(560,360)"/>
+    <wire from="(560,390)" to="(560,410)"/>
+    <wire from="(560,390)" to="(570,390)"/>
+    <wire from="(560,420)" to="(560,430)"/>
+    <wire from="(560,420)" to="(570,420)"/>
   </circuit>
   <circuit name="decode_instru">
     <a name="appearance" val="logisim_evolution"/>
