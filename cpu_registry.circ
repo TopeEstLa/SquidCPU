@@ -64,21 +64,21 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="registry"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(130,370)" name="Constant">
+    <a name="simulationFrequency" val="4.0"/>
+    <comp lib="0" loc="(120,380)" name="Constant">
       <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(130,410)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="slctC"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(140,160)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="C"/>
       <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(140,400)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="north"/>
-      <a name="label" val="slctC"/>
-      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(450,390)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -122,7 +122,7 @@
       <a name="type" val="output"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="2" loc="(140,360)" name="Decoder">
+    <comp lib="2" loc="(130,370)" name="Decoder">
       <a name="select" val="4"/>
     </comp>
     <comp lib="2" loc="(620,130)" name="Multiplexer">
@@ -136,18 +136,18 @@
       <a name="width" val="8"/>
     </comp>
     <comp loc="(450,190)" name="registry_bench"/>
-    <wire from="(130,360)" to="(130,370)"/>
+    <wire from="(120,370)" to="(120,380)"/>
+    <wire from="(130,370)" to="(130,410)"/>
     <wire from="(140,160)" to="(140,190)"/>
     <wire from="(140,190)" to="(230,190)"/>
-    <wire from="(140,360)" to="(140,400)"/>
-    <wire from="(160,210)" to="(230,210)"/>
-    <wire from="(160,220)" to="(230,220)"/>
-    <wire from="(160,230)" to="(220,230)"/>
-    <wire from="(160,240)" to="(210,240)"/>
-    <wire from="(160,250)" to="(200,250)"/>
-    <wire from="(160,260)" to="(190,260)"/>
-    <wire from="(160,270)" to="(180,270)"/>
-    <wire from="(160,280)" to="(170,280)"/>
+    <wire from="(150,210)" to="(230,210)"/>
+    <wire from="(150,220)" to="(230,220)"/>
+    <wire from="(150,230)" to="(220,230)"/>
+    <wire from="(150,240)" to="(210,240)"/>
+    <wire from="(150,250)" to="(200,250)"/>
+    <wire from="(150,260)" to="(190,260)"/>
+    <wire from="(150,270)" to="(180,270)"/>
+    <wire from="(150,280)" to="(170,280)"/>
     <wire from="(170,280)" to="(170,350)"/>
     <wire from="(170,350)" to="(230,350)"/>
     <wire from="(180,270)" to="(180,330)"/>
