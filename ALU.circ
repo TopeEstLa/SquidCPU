@@ -3,9 +3,16 @@
   This file is intended to be loaded by Logisim-evolution v4.1.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="south"/>
+    </tool>
     <tool name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
+    </tool>
+    <tool name="Clock">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
     </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
@@ -469,11 +476,11 @@
     <wire from="(1030,310)" to="(1030,420)"/>
     <wire from="(1030,310)" to="(1070,310)"/>
     <wire from="(1030,440)" to="(1320,440)"/>
-    <wire from="(130,100)" to="(130,440)"/>
-    <wire from="(130,440)" to="(810,440)"/>
+    <wire from="(130,100)" to="(130,420)"/>
+    <wire from="(130,420)" to="(810,420)"/>
     <wire from="(330,100)" to="(330,140)"/>
-    <wire from="(330,170)" to="(330,420)"/>
-    <wire from="(330,420)" to="(810,420)"/>
+    <wire from="(330,170)" to="(330,440)"/>
+    <wire from="(330,440)" to="(810,440)"/>
     <wire from="(690,460)" to="(810,460)"/>
   </circuit>
   <circuit name="alu_arithm">
