@@ -13,6 +13,9 @@
     <tool name="Clock">
       <a name="appearance" val="classic"/>
     </tool>
+    <tool name="Constant">
+      <a name="facing" val="south"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
@@ -94,6 +97,7 @@
     </comp>
     <comp lib="5" loc="(360,170)" name="RAM">
       <a name="appearance" val="logisim_evolution"/>
+      <a name="asyncread" val="true"/>
     </comp>
     <wire from="(130,120)" to="(130,180)"/>
     <wire from="(130,180)" to="(360,180)"/>
