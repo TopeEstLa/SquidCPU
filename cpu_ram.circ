@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="4.1.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v4.1.0(https://github.com/logisim-evolution/).
+<project source="3.8.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -8,10 +8,10 @@
     </tool>
     <tool name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
+      <a name="facing" val="west"/>
     </tool>
     <tool name="Clock">
-      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
     </tool>
     <tool name="Constant">
       <a name="facing" val="south"/>
@@ -20,15 +20,14 @@
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#FPArithmetic" name="4"/>
-  <lib desc="#Memory" name="5"/>
-  <lib desc="#I/O" name="6"/>
-  <lib desc="#TTL" name="7"/>
-  <lib desc="#TCL" name="8"/>
-  <lib desc="#Base" name="9"/>
-  <lib desc="#BFH-Praktika" name="10"/>
-  <lib desc="#Input/Output-Extra" name="11"/>
-  <lib desc="#Soc" name="12"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#TTL" name="6"/>
+  <lib desc="#TCL" name="7"/>
+  <lib desc="#Base" name="8"/>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <lib desc="#Input/Output-Extra" name="10"/>
+  <lib desc="#Soc" name="11"/>
   <main name="ram_data"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -36,20 +35,20 @@
     <a name="simrand" val="0"/>
   </options>
   <mappings>
-    <tool lib="9" map="Button2" name="Poke Tool"/>
-    <tool lib="9" map="Button3" name="Menu Tool"/>
-    <tool lib="9" map="Ctrl Button1" name="Menu Tool"/>
+    <tool lib="8" map="Button2" name="Poke Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
   </mappings>
   <toolbar>
-    <tool lib="9" name="Poke Tool"/>
-    <tool lib="9" name="Edit Tool"/>
-    <tool lib="9" name="Wiring Tool"/>
-    <tool lib="9" name="Text Tool"/>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool"/>
     <sep/>
     <tool lib="0" name="Pin"/>
     <tool lib="0" name="Pin">
       <a name="facing" val="west"/>
-      <a name="type" val="output"/>
+      <a name="output" val="true"/>
     </tool>
     <sep/>
     <tool lib="1" name="NOT Gate"/>
@@ -59,23 +58,40 @@
     <tool lib="1" name="NAND Gate"/>
     <tool lib="1" name="NOR Gate"/>
     <sep/>
-    <tool lib="5" name="D Flip-Flop"/>
-    <tool lib="5" name="Register"/>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
   </toolbar>
   <circuit name="ram_data">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="ram_data"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <ellipse cx="234" cy="503" fill="#1d2fbf" rx="101" ry="229" stroke="#1d2fbf"/>
+      <ellipse cx="279" cy="541" fill="#0b1440" rx="50" ry="145" stroke="none"/>
+      <polygon fill="#ebeb37" points="167,197 304,201 234,275" stroke="#000000"/>
+      <ellipse cx="287" cy="597" fill="#1d2fbf" rx="24" ry="49" stroke="#000000"/>
+      <polygon fill="#ebeb37" points="169,549 257,559 232,613 176,559" stroke="#000000"/>
+      <ellipse cx="266" cy="673" fill="#ffffff" rx="29" ry="27" stroke="none"/>
+      <ellipse cx="266" cy="673" fill="#bc237b" rx="17" ry="16" stroke="none"/>
+      <ellipse cx="267" cy="673" rx="7" ry="7" stroke="none"/>
+      <path d="M291,317 Q380,493 302,674" fill="none" stroke="#31a2fc" stroke-width="8"/>
+      <text dominant-baseline="top" fill="#ffffff" font-family="SansSerif" font-size="30" text-anchor="middle" x="201" y="635">RAM</text>
+      <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="20" text-anchor="middle" x="216" y="703">(data)</text>
+      <path d="M284,649 Q303,671 285,693" fill="none" stroke="#1d2fbf" stroke-width="4"/>
+      <circ-anchor facing="east" x="310" y="280"/>
+      <circ-port dir="in" pin="130,120" x="220" y="200"/>
+      <circ-port dir="in" pin="320,120" x="190" y="300"/>
+      <circ-port dir="in" pin="40,120" x="250" y="200"/>
+      <circ-port dir="out" pin="610,140" x="220" y="730"/>
+    </appear>
     <comp lib="0" loc="(130,120)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="stor_addr"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(210,240)" name="Clock">
-      <a name="appearance" val="classic"/>
-    </comp>
+    <comp lib="0" loc="(210,240)" name="Clock"/>
     <comp lib="0" loc="(320,120)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
@@ -92,10 +108,10 @@
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="stor_out"/>
-      <a name="type" val="output"/>
+      <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="5" loc="(360,170)" name="RAM">
+    <comp lib="4" loc="(360,170)" name="RAM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="asyncread" val="true"/>
     </comp>
@@ -111,10 +127,55 @@
     <wire from="(610,140)" to="(610,260)"/>
   </circuit>
   <circuit name="rom_instru">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="rom_instru"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <ellipse cx="174" cy="162" fill="#eb6e00" rx="29" ry="29" stroke="none"/>
+      <polyline fill="none" points="159,137 160,165" stroke="#d05e00"/>
+      <polyline fill="none" points="166,135 166,172" stroke="#d05e00"/>
+      <polyline fill="none" points="173,134 174,172" stroke="#d05e00"/>
+      <polyline fill="none" points="180,134 181,172" stroke="#d05e00"/>
+      <polyline fill="none" points="187,137 188,165" stroke="#d05e00"/>
+      <path d="M150,148 Q178,123 200,152" fill="none" stroke="#000000" stroke-width="6"/>
+      <ellipse cx="175" cy="273" fill="#eb6e00" rx="52" ry="91" stroke="none"/>
+      <path d="M150,177 Q172,192 198,177" fill="none" stroke="#000000" stroke-width="5"/>
+      <path d="M150,197 Q171,188 198,197" fill="none" stroke="#000000" stroke-width="5"/>
+      <polygon fill="#ffffff" points="152,182 158,187 148,194 156,192 161,191 167,191 171,190 175,190 179,191 182,191 187,192 189,193 196,194 201,196 202,195 191,186 197,180 192,183 184,185 176,186 169,186 164,185 161,185 158,184" stroke="none"/>
+      <polyline fill="none" points="148,195 161,190" stroke="#ffffff"/>
+      <polyline fill="none" points="149,194 158,187" stroke="#ffffff" stroke-width="2"/>
+      <polyline fill="none" points="150,182 158,186" stroke="#ffffff" stroke-width="3"/>
+      <polyline fill="none" points="197,181 189,188" stroke="#ffffff"/>
+      <polyline fill="none" points="205,198 195,190" stroke="#ffffff"/>
+      <path d="M191,185 Q197,181 197,181" fill="none" stroke="#ffffff"/>
+      <polyline fill="none" points="192,187 201,194" stroke="#ffffff"/>
+      <ellipse cx="259" cy="128" fill="none" rx="25" ry="3" stroke="#ffffff"/>
+      <path d="M147,199 Q154,187 149,177" fill="none" stroke="#eb6e00" stroke-width="2"/>
+      <path d="M202,197 Q197,186 199,175" fill="none" stroke="#eb6e00" stroke-width="2"/>
+      <ellipse cx="193" cy="327" fill="#ffffff" rx="12" ry="16" stroke="none"/>
+      <ellipse cx="194" cy="325" rx="9" ry="10" stroke="none"/>
+      <ellipse cx="197" cy="327" fill="#ffffff" rx="3" ry="3" stroke="none"/>
+      <ellipse cx="132" cy="224" fill="#eb6e00" rx="15" ry="14" stroke="none"/>
+      <path d="M120,232 Q113,217 128,211" fill="none" stroke="#000000" stroke-width="2"/>
+      <polygon fill="#ffffff" points="134,224 217,225 221,238 217,241 199,241 181,249 158,239 148,241 139,241 129,239" stroke="#000000" stroke-width="3"/>
+      <ellipse cx="159" cy="246" fill="#d05e00" rx="7" ry="11" stroke="none"/>
+      <path d="M154,241 Q159,231 166,241" fill="none" stroke="#000000"/>
+      <polygon fill="#ffffff" points="123,279 226,279 225,291 214,288 199,287 176,286 150,289 141,290 134,291 125,294" stroke="#000000" stroke-width="2"/>
+      <ellipse cx="163" cy="245" fill="#eb6e00" rx="3" ry="8" stroke="none"/>
+      <ellipse cx="120" cy="280" fill="#eb6e00" rx="11" ry="5" stroke="none"/>
+      <ellipse cx="119" cy="288" fill="#eb6e00" rx="12" ry="6" stroke="none"/>
+      <polygon fill="#ffffff" points="134,290 124,294 124,280 132,280" stroke="none"/>
+      <path d="M135,279 Q113,279 135,279" fill="none" stroke="#000000" stroke-width="2"/>
+      <path d="M124,294 Q124,284 125,280" fill="none" stroke="#000000" stroke-width="2"/>
+      <path d="M112,284 Q102,287 113,293" fill="none" stroke="#000000"/>
+      <path d="M118,276 Q104,277 112,284" fill="none" stroke="#000000"/>
+      <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="16" text-anchor="middle" x="159" y="332">RAM</text>
+      <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="10" text-anchor="middle" x="167" y="349">(code)</text>
+      <circ-anchor facing="east" x="230" y="180"/>
+      <circ-port dir="in" pin="110,120" x="180" y="140"/>
+      <circ-port dir="out" pin="480,120" x="170" y="360"/>
+    </appear>
     <comp lib="0" loc="(110,120)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
@@ -125,10 +186,10 @@
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="instru_out"/>
-      <a name="type" val="output"/>
+      <a name="output" val="true"/>
       <a name="width" val="24"/>
     </comp>
-    <comp lib="5" loc="(170,150)" name="ROM">
+    <comp lib="4" loc="(170,150)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 24
 0

@@ -13,6 +13,9 @@
     <tool name="Clock">
       <a name="facing" val="south"/>
     </tool>
+    <tool name="Constant">
+      <a name="facing" val="south"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
@@ -68,10 +71,35 @@
     <tool lib="4" name="Register"/>
   </toolbar>
   <circuit name="fetch_decode">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="fetch_decode"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="#0e603c" height="80" stroke="none" width="223" x="420" y="262"/>
+      <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="20" font-weight="bold" text-anchor="middle" x="480" y="305">DECODE</text>
+      <rect fill="#d8a47f" height="51" rx="10" ry="10" stroke="none" width="51" x="560" y="276"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="29" font-weight="bold" text-anchor="middle" x="586" y="300">ID</text>
+      <rect fill="#0e603c" height="77" stroke="none" width="164" x="218" y="264"/>
+      <polyline fill="none" points="377,305 410,306" stroke="#51514d" stroke-width="4"/>
+      <polygon fill="#51514d" points="408,314 408,299 423,308" stroke="none"/>
+      <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="20" font-weight="bold" text-anchor="middle" x="273" y="305">FETCH</text>
+      <rect fill="#d8a47f" height="51" rx="10" ry="10" stroke="none" width="51" x="321" y="280"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="29" font-weight="bold" text-anchor="middle" x="347" y="307">IF</text>
+      <polyline fill="none" points="165,301 209,301" stroke="#51514d" stroke-width="4"/>
+      <polygon fill="#51514d" points="201,309 201,294 220,302" stroke="none"/>
+      <circ-anchor facing="east" x="410" y="270"/>
+      <circ-port dir="in" pin="160,430" x="160" y="300"/>
+      <circ-port dir="in" pin="650,460" x="640" y="300"/>
+      <circ-port dir="out" pin="1050,410" x="510" y="260"/>
+      <circ-port dir="out" pin="1050,430" x="540" y="260"/>
+      <circ-port dir="out" pin="1050,450" x="570" y="260"/>
+      <circ-port dir="out" pin="1050,470" x="590" y="260"/>
+      <circ-port dir="out" pin="1050,490" x="610" y="260"/>
+      <circ-port dir="out" pin="1050,510" x="630" y="260"/>
+      <circ-port dir="out" pin="1050,540" x="540" y="340"/>
+      <circ-port dir="out" pin="1060,390" x="480" y="260"/>
+    </appear>
     <comp lib="0" loc="(1050,410)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
@@ -182,6 +210,42 @@
     <a name="circuit" val="decode"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">instru</text>
+      <rect height="3" stroke="none" width="10" x="50" y="79"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">zero</text>
+      <rect height="4" stroke="none" width="10" x="260" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="64">slctOp</text>
+      <rect height="4" stroke="none" width="10" x="260" y="78"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="84">slctREG_in</text>
+      <rect height="3" stroke="none" width="10" x="260" y="99"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="104">jump</text>
+      <rect height="4" stroke="none" width="10" x="260" y="118"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="124">slctRegA</text>
+      <rect height="3" stroke="none" width="10" x="260" y="139"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="144">stor</text>
+      <rect height="4" stroke="none" width="10" x="260" y="158"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="164">ADDR8</text>
+      <rect height="4" stroke="none" width="10" x="260" y="178"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="184">slctRegB</text>
+      <rect height="4" stroke="none" width="10" x="260" y="198"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="204">slctRegWrite</text>
+      <rect height="20" stroke="none" width="200" x="60" y="210"/>
+      <rect fill="none" height="180" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="224">decode</text>
+      <circ-anchor facing="east" x="270" y="60"/>
+      <circ-port dir="in" pin="170,410" x="50" y="80"/>
+      <circ-port dir="in" pin="240,80" x="50" y="60"/>
+      <circ-port dir="out" pin="500,450" x="270" y="120"/>
+      <circ-port dir="out" pin="500,530" x="270" y="200"/>
+      <circ-port dir="out" pin="510,470" x="270" y="140"/>
+      <circ-port dir="out" pin="510,510" x="270" y="180"/>
+      <circ-port dir="out" pin="550,430" x="270" y="100"/>
+      <circ-port dir="out" pin="560,360" x="270" y="60"/>
+      <circ-port dir="out" pin="560,490" x="270" y="160"/>
+      <circ-port dir="out" pin="680,410" x="270" y="80"/>
+    </appear>
     <comp lib="0" loc="(170,100)" name="Constant"/>
     <comp lib="0" loc="(170,410)" name="Pin">
       <a name="appearance" val="classic"/>
