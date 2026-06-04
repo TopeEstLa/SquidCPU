@@ -72,98 +72,108 @@
     <a name="circuit" val="fetch_decode"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(300,270)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="F_24bits"/>
-      <a name="width" val="24"/>
-    </comp>
-    <comp lib="0" loc="(550,340)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="zero"/>
-    </comp>
-    <comp lib="0" loc="(950,290)" name="Pin">
+    <comp lib="0" loc="(1050,410)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="ADDR8"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(950,310)" name="Pin">
+    <comp lib="0" loc="(1050,430)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctREG_in"/>
       <a name="output" val="true"/>
       <a name="width" val="2"/>
     </comp>
-    <comp lib="0" loc="(950,330)" name="Pin">
+    <comp lib="0" loc="(1050,450)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctRegWrite"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(950,350)" name="Pin">
+    <comp lib="0" loc="(1050,470)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctRegB"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(950,370)" name="Pin">
+    <comp lib="0" loc="(1050,490)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctRegA"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(950,390)" name="Pin">
+    <comp lib="0" loc="(1050,510)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctOp"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(950,420)" name="Pin">
+    <comp lib="0" loc="(1050,540)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="stor"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(960,270)" name="Pin">
+    <comp lib="0" loc="(1060,390)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="jump"/>
       <a name="output" val="true"/>
     </comp>
-    <comp loc="(560,270)" name="fetch"/>
-    <comp loc="(780,320)" name="decode"/>
-    <wire from="(300,270)" to="(340,270)"/>
-    <wire from="(550,340)" to="(560,340)"/>
-    <wire from="(560,270)" to="(560,320)"/>
-    <wire from="(780,320)" to="(900,320)"/>
-    <wire from="(780,340)" to="(820,340)"/>
-    <wire from="(780,360)" to="(800,360)"/>
-    <wire from="(780,380)" to="(850,380)"/>
-    <wire from="(780,400)" to="(940,400)"/>
-    <wire from="(780,420)" to="(810,420)"/>
-    <wire from="(780,440)" to="(840,440)"/>
-    <wire from="(780,460)" to="(830,460)"/>
-    <wire from="(800,270)" to="(800,360)"/>
-    <wire from="(800,270)" to="(960,270)"/>
-    <wire from="(810,290)" to="(810,420)"/>
-    <wire from="(810,290)" to="(950,290)"/>
-    <wire from="(820,310)" to="(820,340)"/>
-    <wire from="(820,310)" to="(950,310)"/>
-    <wire from="(830,330)" to="(830,460)"/>
-    <wire from="(830,330)" to="(950,330)"/>
-    <wire from="(840,350)" to="(840,440)"/>
-    <wire from="(840,350)" to="(950,350)"/>
-    <wire from="(850,370)" to="(850,380)"/>
-    <wire from="(850,370)" to="(950,370)"/>
-    <wire from="(900,320)" to="(900,390)"/>
-    <wire from="(900,390)" to="(950,390)"/>
-    <wire from="(940,400)" to="(940,420)"/>
-    <wire from="(940,420)" to="(950,420)"/>
+    <comp lib="0" loc="(160,430)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="F_24bits"/>
+      <a name="width" val="24"/>
+    </comp>
+    <comp lib="0" loc="(470,450)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="24"/>
+    </comp>
+    <comp lib="0" loc="(650,460)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="zero"/>
+    </comp>
+    <comp lib="2" loc="(560,440)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="width" val="24"/>
+    </comp>
+    <comp loc="(420,430)" name="fetch"/>
+    <comp loc="(880,440)" name="decode"/>
+    <wire from="(1000,440)" to="(1000,510)"/>
+    <wire from="(1000,510)" to="(1050,510)"/>
+    <wire from="(1040,520)" to="(1040,540)"/>
+    <wire from="(1040,540)" to="(1050,540)"/>
+    <wire from="(160,430)" to="(200,430)"/>
+    <wire from="(420,430)" to="(530,430)"/>
+    <wire from="(470,450)" to="(530,450)"/>
+    <wire from="(560,440)" to="(660,440)"/>
+    <wire from="(650,460)" to="(660,460)"/>
+    <wire from="(880,440)" to="(1000,440)"/>
+    <wire from="(880,460)" to="(920,460)"/>
+    <wire from="(880,480)" to="(900,480)"/>
+    <wire from="(880,500)" to="(950,500)"/>
+    <wire from="(880,520)" to="(1040,520)"/>
+    <wire from="(880,540)" to="(910,540)"/>
+    <wire from="(880,560)" to="(940,560)"/>
+    <wire from="(880,580)" to="(930,580)"/>
+    <wire from="(900,390)" to="(1060,390)"/>
+    <wire from="(900,390)" to="(900,480)"/>
+    <wire from="(910,410)" to="(1050,410)"/>
+    <wire from="(910,410)" to="(910,540)"/>
+    <wire from="(920,430)" to="(1050,430)"/>
+    <wire from="(920,430)" to="(920,460)"/>
+    <wire from="(930,450)" to="(1050,450)"/>
+    <wire from="(930,450)" to="(930,580)"/>
+    <wire from="(940,470)" to="(1050,470)"/>
+    <wire from="(940,470)" to="(940,560)"/>
+    <wire from="(950,490)" to="(1050,490)"/>
+    <wire from="(950,490)" to="(950,500)"/>
   </circuit>
   <circuit name="decode">
     <a name="appearance" val="logisim_evolution"/>
