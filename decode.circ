@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.8.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
+<project source="4.1.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v4.1.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -11,6 +11,7 @@
       <a name="facing" val="west"/>
     </tool>
     <tool name="Clock">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
     </tool>
     <tool name="Constant">
@@ -24,15 +25,16 @@
     </tool>
   </lib>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
-  <lib desc="#I/O" name="5"/>
-  <lib desc="#TTL" name="6"/>
-  <lib desc="#TCL" name="7"/>
-  <lib desc="#Base" name="8"/>
-  <lib desc="#BFH-Praktika" name="9"/>
-  <lib desc="#Input/Output-Extra" name="10"/>
-  <lib desc="#Soc" name="11"/>
-  <lib desc="file#cpu_registry.circ" name="12">
+  <lib desc="#FPArithmetic" name="4"/>
+  <lib desc="#Memory" name="5"/>
+  <lib desc="#I/O" name="6"/>
+  <lib desc="#TTL" name="7"/>
+  <lib desc="#TCL" name="8"/>
+  <lib desc="#Base" name="9"/>
+  <lib desc="#BFH-Praktika" name="10"/>
+  <lib desc="#Input/Output-Extra" name="11"/>
+  <lib desc="#Soc" name="12"/>
+  <lib desc="file#cpu_registry.circ" name="13">
     <tool name="registry_24bits">
       <a name="facing" val="south"/>
     </tool>
@@ -44,20 +46,20 @@
     <a name="simrand" val="0"/>
   </options>
   <mappings>
-    <tool lib="8" map="Button2" name="Poke Tool"/>
-    <tool lib="8" map="Button3" name="Menu Tool"/>
-    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+    <tool lib="9" map="Button2" name="Poke Tool"/>
+    <tool lib="9" map="Button3" name="Menu Tool"/>
+    <tool lib="9" map="Ctrl Button1" name="Menu Tool"/>
   </mappings>
   <toolbar>
-    <tool lib="8" name="Poke Tool"/>
-    <tool lib="8" name="Edit Tool"/>
-    <tool lib="8" name="Wiring Tool"/>
-    <tool lib="8" name="Text Tool"/>
+    <tool lib="9" name="Poke Tool"/>
+    <tool lib="9" name="Edit Tool"/>
+    <tool lib="9" name="Wiring Tool"/>
+    <tool lib="9" name="Text Tool"/>
     <sep/>
     <tool lib="0" name="Pin"/>
     <tool lib="0" name="Pin">
       <a name="facing" val="west"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
     </tool>
     <sep/>
     <tool lib="1" name="NOT Gate"/>
@@ -67,8 +69,8 @@
     <tool lib="1" name="NAND Gate"/>
     <tool lib="1" name="NOR Gate"/>
     <sep/>
-    <tool lib="4" name="D Flip-Flop"/>
-    <tool lib="4" name="Register"/>
+    <tool lib="5" name="D Flip-Flop"/>
+    <tool lib="5" name="Register"/>
   </toolbar>
   <circuit name="fetch_decode">
     <a name="appearance" val="custom"/>
@@ -76,83 +78,177 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <rect fill="#0e603c" height="80" stroke="none" width="223" x="420" y="262"/>
-      <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="20" font-weight="bold" text-anchor="middle" x="480" y="305">DECODE</text>
-      <rect fill="#d8a47f" height="51" rx="10" ry="10" stroke="none" width="51" x="560" y="276"/>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="29" font-weight="bold" text-anchor="middle" x="586" y="300">ID</text>
-      <rect fill="#0e603c" height="77" stroke="none" width="164" x="218" y="264"/>
-      <polyline fill="none" points="377,305 410,306" stroke="#51514d" stroke-width="4"/>
-      <polygon fill="#51514d" points="408,314 408,299 423,308" stroke="none"/>
-      <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="20" font-weight="bold" text-anchor="middle" x="273" y="305">FETCH</text>
-      <rect fill="#d8a47f" height="51" rx="10" ry="10" stroke="none" width="51" x="321" y="280"/>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="29" font-weight="bold" text-anchor="middle" x="347" y="307">IF</text>
-      <polyline fill="none" points="165,301 209,301" stroke="#51514d" stroke-width="4"/>
-      <polygon fill="#51514d" points="201,309 201,294 220,302" stroke="none"/>
+      <polygon fill="#68482c" points="559,331 551,340 539,341 521,341 506,340 507,357 528,362 549,358 562,356 574,354 581,340 576,329" stroke="#8a896b"/>
+      <polygon fill="#b03e45" points="306,273 308,284 319,284 320,275" stroke="#632327"/>
+      <polygon fill="#b03e45" points="299,284 320,284 321,300 295,299" stroke="#632327"/>
+      <polygon fill="#e2dead" points="264,297 248,296 245,296 234,300 227,301 234,310 242,311 249,312 257,311 267,308 271,303 268,297" stroke="none"/>
+      <polygon fill="#e2dead" points="271,303 273,306 274,309 276,311 281,313 286,314 291,315 296,314 303,315 309,315 316,315 321,312 325,310 328,306 330,303 332,299 332,296 332,293 330,295 321,297 323,303 317,305 309,302 298,305 291,306 282,306 274,303" stroke="none"/>
+      <polygon fill="#e2dead" points="313,312 312,316 311,322 310,327 308,331 305,335 301,338 296,339 290,340 284,341 277,341 273,342 272,345 271,348 273,352 278,353 282,354 290,354 297,354 304,353 310,351 317,345 320,339 320,331 319,321 316,313" stroke="none"/>
+      <polygon fill="#e2dead" points="323,308 328,313 330,318 331,323 331,327 331,331 330,338 327,344 324,351 325,355 331,360 338,360 342,356 344,351 344,344 344,335 343,328 343,325 340,319 338,317 336,314 333,311 331,309 328,307 327,306" stroke="none"/>
+      <polygon fill="#e2dead" points="328,300 331,302 337,304 341,304 352,302 357,296 357,293 346,294 346,290 348,288 346,293 358,290 359,288 361,278 360,273 358,270 354,266 347,263 340,261 336,261 328,265 320,273 325,273 329,275 331,279 331,281 326,282 326,284 321,284 321,289 321,293 322,296" stroke="#969473"/>
+      <polygon fill="#703522" points="233,307 239,306 239,301 236,300 232,301 229,301 228,301" stroke="#8a412a"/>
+      <polygon fill="none" points="243,304 249,303 250,299 247,298 246,298 244,299 242,300" stroke="#000000"/>
+      <polygon fill="#703522" points="242,311 249,312 249,306 246,305 245,305 243,306 241,307" stroke="#8a412a"/>
+      <polygon fill="#703522" points="254,308 262,308 263,304 256,301 254,301 252,303 251,306" stroke="#8a412a"/>
+      <polygon fill="#703522" points="243,304 249,303 250,299 247,298 246,298 244,299 242,300" stroke="#8a412a"/>
+      <polygon fill="#703522" points="263,299 260,300 262,302 265,303" stroke="#8a412a"/>
+      <polygon fill="#703522" points="276,350 284,350 285,346 278,343 276,343 274,345 273,348" stroke="#8a412a"/>
+      <polygon fill="#703522" points="288,349 294,348 294,343 291,342 288,341 287,341 287,346" stroke="#8a412a"/>
+      <polygon fill="#703522" points="296,349 293,350 293,353 299,351" stroke="#8a412a"/>
+      <polygon fill="#703522" points="299,346 305,345 306,341 303,340 302,340 300,341 298,342" stroke="#8a412a"/>
+      <polygon fill="#703522" points="309,348 301,347 302,351 306,351" stroke="#8a412a"/>
+      <polygon fill="#b03e45" points="276,273 284,283 271,296 260,280" stroke="#632327"/>
+      <polygon fill="#b03e45" points="284,283 299,284 295,299 272,296" stroke="#632327"/>
+      <polygon fill="#b0824b" points="260,280 271,296 292,299 312,299 318,298 321,296 322,296 325,297 324,301 321,304 316,306 311,306 306,307 300,307 296,307 293,307 288,306 284,306 278,304 274,303 272,303 269,301 267,299 263,296 261,294 259,290 256,287 255,285 255,282 258,281" stroke="#574126"/>
+      <polygon fill="#b03e45" points="277,273 282,271 296,271 306,273 308,284 299,284 284,283" stroke="#632327"/>
+      <polygon fill="#bdba91" points="334,337 340,336 341,332 338,331 337,331 335,332 333,333" stroke="#a3a07d"/>
+      <polygon fill="#bdba91" points="340,340 332,339 333,343 337,343" stroke="#a3a07d"/>
+      <polygon fill="#bdba91" points="329,355 337,355 338,351 331,348 329,348 327,350 326,353" stroke="#a3a07d"/>
+      <polygon fill="#bdba91" points="341,344 336,347 340,350 342,347" stroke="#a3a07d"/>
+      <path d="M330,295 Q335,302 343,299" fill="none" stroke="#969473"/>
+      <ellipse cx="325" cy="280" fill="#ffffff" rx="8" ry="14" stroke="#000000"/>
+      <ellipse cx="352" cy="287" fill="#ffffff" rx="8" ry="14" stroke="#000000"/>
+      <ellipse cx="325" cy="279" fill="#c98063" rx="4" ry="4" stroke="none"/>
+      <ellipse cx="325" cy="279" rx="2" ry="2" stroke="none"/>
+      <ellipse cx="352" cy="287" fill="#c98063" rx="4" ry="4" stroke="none"/>
+      <ellipse cx="352" cy="287" rx="2" ry="2" stroke="none"/>
+      <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="12" text-anchor="middle" x="290" y="282">FETCH</text>
+      <polyline fill="none" points="174,267 208,268" stroke="#296390"/>
+      <polyline fill="none" points="219,278 245,278" stroke="#000000"/>
+      <polyline fill="none" points="311,251 327,251" stroke="#b2e4ff"/>
+      <polyline fill="none" points="214,341 229,341" stroke="#b2e4ff"/>
+      <path d="M164,302 Q187,313 212,303" fill="none" stroke="#296390" stroke-width="4"/>
+      <ellipse cx="188" cy="300" fill="#00bbfb" rx="26" ry="5" stroke="none"/>
+      <path d="M163,299 Q191,291 213,301" fill="none" stroke="#b2e4ff" stroke-width="4"/>
+      <ellipse cx="215" cy="295" fill="#00bbfb" rx="4" ry="2" stroke="none"/>
+      <path d="M213,297 Q220,297 219,294" fill="none" stroke="#b2e4ff"/>
+      <path d="M211,294 Q213,292 219,294" fill="none" stroke="#b2e4ff"/>
+      <ellipse cx="413" cy="301" fill="#00bbfb" rx="4" ry="2" stroke="none"/>
+      <ellipse cx="386" cy="306" fill="#00bbfb" rx="26" ry="5" stroke="none"/>
+      <path d="M361,305 Q389,297 411,307" fill="none" stroke="#b2e4ff" stroke-width="4"/>
+      <path d="M411,303 Q418,303 417,300" fill="none" stroke="#b2e4ff"/>
+      <path d="M362,308 Q385,319 410,309" fill="none" stroke="#296390" stroke-width="4"/>
+      <path d="M409,300 Q411,298 417,300" fill="none" stroke="#b2e4ff"/>
+      <polyline fill="none" points="358,338 374,338" stroke="#00bbfb"/>
+      <polyline fill="none" points="404,251 430,251" stroke="#296390"/>
+      <polyline fill="none" points="386,355 420,356" stroke="#b2e4ff"/>
+      <polyline fill="none" points="229,241 277,241" stroke="#000000"/>
+      <polygon fill="#68482c" points="440,310 423,319 414,322 395,324 386,331 393,340 406,346 426,341 440,336 453,329 460,317" stroke="#8a896b"/>
+      <polygon fill="#68482c" points="527,331 527,344 518,353 493,356 476,365 476,379 499,382 532,376 543,367 547,355 546,338 539,331" stroke="#8a896b"/>
+      <polygon fill="#8a896b" points="583,323 618,331 629,330 640,330 652,332 668,331 678,325 685,319 690,313 692,303 692,293 692,282 692,275 690,266 683,264 674,263 666,263 658,265 654,266 648,274 646,284 642,294 639,297 632,296 623,297 615,298 608,298 598,314" stroke="none"/>
+      <polygon fill="#68482c" points="418,281 452,271 453,252 433,257" stroke="#9c6c43" stroke-width="2"/>
+      <polygon fill="#68482c" points="418,283 434,305 440,311 459,279 452,272" stroke="#9c6c43" stroke-width="2"/>
+      <polygon fill="#68482c" points="453,253 452,272 458,279 512,251 487,248" stroke="#9c6c43" stroke-width="2"/>
+      <polygon fill="#68482c" points="440,310 484,326 492,286 459,280" stroke="#9c6c43" stroke-width="2"/>
+      <polygon fill="#68482c" points="459,278 492,286 535,281 514,252" stroke="#9c6c43" stroke-width="2"/>
+      <polygon fill="#68482c" points="484,326 533,331 536,280 492,286" stroke="#9c6c43" stroke-width="2"/>
+      <polygon fill="#68482c" points="533,331 561,332 565,284 537,281" stroke="#9c6c43" stroke-width="2"/>
+      <polygon fill="#68482c" points="515,252 536,282 565,284 569,256 558,254" stroke="#9c6c43" stroke-width="2"/>
+      <polygon fill="#68482c" points="564,301 591,295 599,313 577,328 562,331" stroke="#9c6c43" stroke-width="2"/>
+      <polygon fill="#68482c" points="590,294 596,267 610,275 611,293 599,311" stroke="#9c6c43" stroke-width="2"/>
+      <polygon fill="#68482c" points="564,301 569,256 595,267 590,295" stroke="#9c6c43" stroke-width="2"/>
+      <polygon fill="#8f633e" points="389,332 397,326 400,333 394,335" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="394,337 411,333 411,341 401,342" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="399,327 416,325 418,329 406,332" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="415,335 430,330 430,336 422,340" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="425,324 440,319 437,330 432,329" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="479,369 494,364 491,375 486,374" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="497,371 512,366 512,372 504,376" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="497,360 508,359 511,364 501,365" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="517,368 525,366 532,371 520,375" stroke="#5c3f27"/>
+      <polygon fill="none" points="664,304 665,305 667,307 672,311 678,312 682,312 686,312 688,314 684,318 677,322 674,320 668,318 663,313 661,309 661,303 662,300" stroke="#b0824b"/>
+      <path d="M659,297 Q655,309 660,314" fill="none" stroke="#c9c89d"/>
+      <polygon fill="#8f633e" points="674,266 680,268 680,272 677,272" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="667,265 671,267 672,270 668,270" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="669,272 671,278 674,277 674,273" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="677,275 679,281 683,279 681,274" stroke="#5c3f27"/>
+      <ellipse cx="658" cy="280" fill="#ffffff" rx="8" ry="9" stroke="none"/>
+      <ellipse cx="687" cy="285" fill="#ffffff" rx="8" ry="9" stroke="none"/>
+      <ellipse cx="658" cy="280" fill="#6e8454" rx="4" ry="4" stroke="none"/>
+      <ellipse cx="687" cy="285" fill="#6e8454" rx="4" ry="3" stroke="none"/>
+      <polygon fill="#8f633e" points="670,280 669,285 675,285 675,281" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="659,268 663,266 666,270 663,270" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="682,267 688,269 688,273 685,273" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="633,299 637,298 639,305 633,306" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="624,299 630,300 631,307 627,305" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="618,299 615,303 623,306 622,301" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="627,309 635,309 634,313 630,314" stroke="#5c3f27"/>
+      <polygon fill="#8f633e" points="617,306 624,309 623,313 619,311" stroke="#5c3f27"/>
+      <ellipse cx="659" cy="280" rx="2" ry="2" stroke="none"/>
+      <ellipse cx="687" cy="285" rx="2" ry="1" stroke="none"/>
+      <path d="M650,275 Q658,264 667,276" fill="#c9c89d" stroke="none"/>
+      <path d="M679,282 Q686,269 696,282" fill="#c9c89d" stroke="none"/>
+      <path d="M650,280 Q655,296 667,285" fill="#c9c89d" stroke="none"/>
+      <path d="M679,288 Q687,301 696,289" fill="#c9c89d" stroke="none"/>
+      <polyline fill="none" points="608,255 624,255" stroke="#00bbfb"/>
+      <polyline fill="none" points="462,343 488,343" stroke="#296390"/>
+      <polyline fill="none" points="582,360 630,360" stroke="#000000"/>
+      <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="19" text-anchor="middle" x="484" y="281">DECODE</text>
       <circ-anchor facing="east" x="410" y="270"/>
       <circ-port dir="in" pin="160,430" x="160" y="300"/>
-      <circ-port dir="in" pin="650,460" x="640" y="300"/>
-      <circ-port dir="out" pin="1050,410" x="510" y="260"/>
-      <circ-port dir="out" pin="1050,430" x="540" y="260"/>
-      <circ-port dir="out" pin="1050,450" x="570" y="260"/>
-      <circ-port dir="out" pin="1050,470" x="590" y="260"/>
-      <circ-port dir="out" pin="1050,490" x="610" y="260"/>
-      <circ-port dir="out" pin="1050,510" x="630" y="260"/>
-      <circ-port dir="out" pin="1050,540" x="540" y="340"/>
-      <circ-port dir="out" pin="1060,390" x="480" y="260"/>
+      <circ-port dir="in" pin="650,460" x="690" y="310"/>
+      <circ-port dir="out" pin="1050,410" x="490" y="250"/>
+      <circ-port dir="out" pin="1050,430" x="520" y="250"/>
+      <circ-port dir="out" pin="1050,450" x="550" y="250"/>
+      <circ-port dir="out" pin="1050,470" x="570" y="250"/>
+      <circ-port dir="out" pin="1050,490" x="590" y="260"/>
+      <circ-port dir="out" pin="1050,510" x="610" y="270"/>
+      <circ-port dir="out" pin="1050,540" x="540" y="370"/>
+      <circ-port dir="out" pin="1060,390" x="460" y="250"/>
     </appear>
     <comp lib="0" loc="(1050,410)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="ADDR8"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(1050,430)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctREG_in"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="2"/>
     </comp>
     <comp lib="0" loc="(1050,450)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctRegWrite"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1050,470)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctRegB"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1050,490)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctRegA"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1050,510)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctOp"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1050,540)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="stor"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(1060,390)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="jump"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(160,430)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -261,57 +357,57 @@
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctRegA"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(500,530)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctRegWrite"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(510,470)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="stor"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(510,510)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctRegB"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(550,430)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="jump"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(560,360)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctOp"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(560,490)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="ADDR8"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(680,410)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctREG_in"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="2"/>
     </comp>
-    <comp lib="12" loc="(240,370)" name="registry_24bits">
+    <comp lib="13" loc="(240,370)" name="registry_24bits">
       <a name="facing" val="south"/>
     </comp>
     <comp loc="(500,390)" name="decode_instru"/>
@@ -346,10 +442,10 @@
       <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="D_24bits"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="24"/>
     </comp>
-    <comp lib="12" loc="(380,460)" name="registry_24bits">
+    <comp lib="13" loc="(380,460)" name="registry_24bits">
       <a name="facing" val="south"/>
     </comp>
     <wire from="(350,230)" to="(360,230)"/>
@@ -366,20 +462,20 @@
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctRegWrite"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1230,240)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="jump"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(160,250)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="slctRegA"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(240,120)" name="Pin">
@@ -421,7 +517,7 @@
       <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="slctRegB"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(300,330)" name="Splitter">
@@ -444,27 +540,27 @@
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctOp"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(640,260)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="stor"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(740,330)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="ADRR8"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(750,220)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctREG_in"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="2"/>
     </comp>
     <comp lib="0" loc="(820,850)" name="Constant">
@@ -713,39 +809,39 @@
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="slcOp"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(790,140)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="slctREG_in"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
       <a name="width" val="2"/>
     </comp>
     <comp lib="0" loc="(790,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="jump"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(790,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="stor"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(790,230)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="jne"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(790,260)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="jeq"/>
-      <a name="output" val="true"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="1" loc="(380,110)" name="NOT Gate"/>
     <comp lib="1" loc="(380,150)" name="NOT Gate"/>
