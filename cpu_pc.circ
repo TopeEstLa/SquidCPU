@@ -14,6 +14,9 @@
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
     </tool>
+    <tool name="Constant">
+      <a name="facing" val="south"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
@@ -66,10 +69,58 @@
     <tool lib="5" name="Register"/>
   </toolbar>
   <circuit name="pc">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="pc"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <polygon fill="#2f89d4" points="263,338 261,351 263,357 264,370 270,386 276,399 309,454 273,474 249,493 224,514 202,537 194,553 208,558 226,550 248,534 274,522 306,517 340,510 350,507 377,522 397,534 423,539 456,543 496,542 535,533 561,525 592,509 628,515 671,527 704,544 725,552 695,510 667,478 637,457 676,389 682,352 673,323 651,301 620,288 607,287 545,231 515,220 498,139 489,111 481,107 470,126 461,155 454,189 450,218 413,229 387,244 361,266 343,284 324,290 304,296 284,308 277,314 270,322 266,329" stroke="none"/>
+      <polygon fill="#b5bec3" points="276,356 287,384 298,407 312,429 328,457 353,490 381,508 414,523 457,532 497,532 532,527 568,512 600,491 616,466 637,427 662,387 671,360 671,342 654,327 632,322 612,321 589,330 563,339 536,344 507,347 484,355 475,359 456,352 416,345 382,337 349,325 322,322 302,326 281,337" stroke="#000000"/>
+      <path d="M380,272 Q429,315 474,348" fill="none" stroke="#000000" stroke-width="7"/>
+      <path d="M575,275 Q525,311 476,349" fill="none" stroke="#000000" stroke-width="7"/>
+      <path d="M433,323 Q396,333 368,312" fill="none" stroke="#000000" stroke-width="6"/>
+      <path d="M574,319 Q550,341 514,324" fill="none" stroke="#000000" stroke-width="6"/>
+      <polygon fill="#ffffff" points="569,284 577,293 574,303 571,311 560,317 547,317 536,318 530,316 531,312" stroke="none"/>
+      <polygon fill="#ffffff" points="384,282 377,288 373,297 379,307 388,314 405,313 418,307" stroke="none"/>
+      <ellipse cx="396" cy="298" rx="13" ry="10" stroke="none"/>
+      <ellipse cx="551" cy="302" rx="13" ry="10" stroke="none"/>
+      <ellipse cx="400" cy="299" fill="#ffffff" rx="4" ry="4" stroke="none"/>
+      <ellipse cx="550" cy="304" fill="#ffffff" rx="4" ry="3" stroke="none"/>
+      <ellipse cx="439" cy="374" rx="4" ry="8" stroke="none"/>
+      <ellipse cx="506" cy="374" rx="4" ry="8" stroke="none"/>
+      <path d="M365,390 Q477,420 584,392" fill="none" stroke="#000000" stroke-width="8"/>
+      <polygon fill="#ffffff" points="319,372 338,383 364,397 387,405 414,412 457,417 502,417 542,411 571,402 600,387 624,373 642,362 630,397 613,434 587,464 557,484 522,499 483,507 425,502 382,482 355,458 329,428 312,393 302,360" stroke="#000000"/>
+      <polyline fill="none" points="331,381 325,420" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="328,420 354,392" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="355,392 345,446" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="346,444 387,405" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="386,405 377,474" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="417,414 377,476" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="418,414 416,497" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="450,419 416,497" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="450,419 467,505" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="494,419 467,505" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="494,419 523,495" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="533,415 523,495" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="533,415 565,477" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="565,407 565,477" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="565,407 600,445" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="591,392 600,445" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="591,392 620,415" stroke="#000000" stroke-width="4"/>
+      <polyline fill="none" points="616,379 620,415" stroke="#000000" stroke-width="4"/>
+      <polygon fill="#b5bec3" points="402,265 455,225 463,223 475,229 478,235 481,242 479,253 474,257 467,258 453,258 446,254 441,252 439,251 432,257 422,262 418,265 410,270" stroke="#000000"/>
+      <polygon fill="#b5bec3" points="534,266 533,266 527,257 517,252 500,248 486,252 475,267 468,287 466,302 475,312 488,312 497,304 496,302 488,301 483,297 482,286 486,272 495,262 511,257 517,268 521,273 527,276 532,272" stroke="#000000"/>
+      <polygon fill="#2f89d4" points="452,244 458,236 465,234 471,239 472,244 470,251 461,252 455,249" stroke="none"/>
+      <circ-anchor facing="east" x="430" y="220"/>
+      <circ-port dir="in" pin="470,430" x="420" y="540"/>
+      <circ-port dir="in" pin="580,60" x="260" y="350"/>
+      <circ-port dir="in" pin="640,440" x="450" y="540"/>
+      <circ-port dir="in" pin="710,60" x="500" y="160"/>
+      <circ-port dir="in" pin="780,440" x="480" y="540"/>
+      <circ-port dir="out" pin="110,450" x="200" y="550"/>
+      <circ-port dir="out" pin="350,140" x="480" y="110"/>
+      <circ-port dir="out" pin="910,140" x="680" y="350"/>
+    </appear>
     <comp lib="0" loc="(110,450)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>

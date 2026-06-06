@@ -186,12 +186,12 @@
       <text dominant-baseline="central" fill="#ffffff" font-family="SansSerif" font-size="19" text-anchor="middle" x="484" y="281">DECODE</text>
       <circ-anchor facing="east" x="410" y="270"/>
       <circ-port dir="in" pin="160,430" x="160" y="300"/>
-      <circ-port dir="in" pin="650,460" x="690" y="310"/>
+      <circ-port dir="in" pin="650,460" x="630" y="300"/>
       <circ-port dir="out" pin="1050,410" x="490" y="250"/>
       <circ-port dir="out" pin="1050,430" x="520" y="250"/>
-      <circ-port dir="out" pin="1050,450" x="550" y="250"/>
+      <circ-port dir="out" pin="1050,450" x="590" y="260"/>
       <circ-port dir="out" pin="1050,470" x="570" y="250"/>
-      <circ-port dir="out" pin="1050,490" x="590" y="260"/>
+      <circ-port dir="out" pin="1050,490" x="550" y="250"/>
       <circ-port dir="out" pin="1050,510" x="610" y="270"/>
       <circ-port dir="out" pin="1050,540" x="540" y="370"/>
       <circ-port dir="out" pin="1060,390" x="460" y="250"/>
